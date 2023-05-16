@@ -16,7 +16,6 @@ Ao adicionar um novo item, o usuário deve inserir o nome do produto e a quantid
 
 **Observação:** não é necessário criar nenhuma interface do usuário para esse desafio (a não ser que você queira), o objetivo é executar apenas um único arquivo.
 
----
 ## DICA
 
 Você pode criar uma classe chamada `ListaDeCompras` para resolver este desafio.
