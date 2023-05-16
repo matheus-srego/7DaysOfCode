@@ -10,6 +10,8 @@ public class ShoppingList {
 		
 		itensInsertionTest();
 		
+		itensRemovalTest();
+		
 	}
 	
 	public static void insertItens( String itemName, Integer itemQuantity ) {
@@ -17,6 +19,22 @@ public class ShoppingList {
 		itens.add( itemName );
 		amounts.add( itemQuantity );
 		
+	}
+	
+	public static void removeItens( String itemName ) {
+		
+		for( int i = 0; i < itens.size(); i++ ) {
+			if( itens.contains( itemName ) ) {
+				Integer amount = amounts.get( i );
+				
+				itens.remove( itemName );
+				amounts.remove( amount );
+				
+				System.out.println( "\n> " + itemName + " (quantidade: " + amount + ") foi removido da lista de compras.." );
+				break;
+			}
+		}
+			
 	}
 	
 	/* --- TEST METHODS --- */
@@ -46,4 +64,18 @@ public class ShoppingList {
 		}
 		
 	}
+	
+	public static void itensRemovalTest() {
+		
+		final List<String> totalItens = new ArrayList<String>();
+		totalItens.addAll( itens );
+		
+		for( String item : totalItens ) {
+			
+			removeItens( item );
+			
+		}
+		
+	}
+	
 }
