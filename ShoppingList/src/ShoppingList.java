@@ -10,7 +10,11 @@ public class ShoppingList {
 		
 		itensInsertionTest();
 		
+		listItens();
+		
 		itensRemovalTest();
+		
+		listItens();
 		
 	}
 	
@@ -35,6 +39,36 @@ public class ShoppingList {
 			}
 		}
 			
+	}
+	
+	public static void listItens() {
+		
+		System.out.println( " --- LISTA DE COMPRAS --- " );
+		System.out.println( " Produto    //    Quantidade " );
+		System.out.println( " --------------------------- " );
+		
+		for( int i = 0; i < itens.size(); i++ ) {
+			for( int j = 0; j < amounts.size(); j++ ) {
+				if( i == j ) {
+					System.out.println( " " + itens.get( i ) + "    //    " + amounts.get( j ) );
+					break;
+				}
+			}
+
+			System.out.println( " --------------------------- " );
+			
+		}
+		
+		if( itens.isEmpty() || amounts.isEmpty()) {
+			
+			System.out.println( "A lista de compras esta vazia" );
+			System.out.println( " --------------------------- " );
+			
+		}
+		else {
+			System.out.println( " --- FIM DA LISTA DE COMPRAS --- " );			
+		}
+		
 	}
 	
 	/* --- TEST METHODS --- */
